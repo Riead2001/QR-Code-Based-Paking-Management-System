@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park.io</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-height: fit-content;
+  background-color: #3d0865;
+  background-size: contain;
+  background-position: center;
+  padding: 10px 8%;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.logo {
+  width: 80px; /* Adjust the width of the logo */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0; /* Adjust margins as needed */
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+  list-style: none;
+  width: 100%;
+  text-align: right;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  color: rgb(200, 200, 200);
+  text-decoration: none;
+}
+    
+.btnL{
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      border: 0;
+      outline: 0;
+      border-radius: 40px;
+      background-color:#3d0865;
+      cursor: pointer;
+    }
+    .btnL a{
+      color:white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .btnR{
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      border:0;
+      outline: 0;
+      border-radius: 40px;
+      background-color: black;
+      cursor: pointer;
+    }
+    .btnR a{
+      color:white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .btnT{
+      position: relative;
+      left:50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+      align-items: center;
+      padding-top: 200px;
+      padding-bottom: 200px;
+      padding-left: 100px;
+      padding-right: 100px;
+      border:0;
+      outline: 0;
+      background-color:transparent;
+      cursor: pointer;
+    
+    }
+    footer{
+      background-color:#3d0865;
+      padding-top: 50px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 5px;      
+    }
+    .footContainer{
+      justify-content: center;   
+    }
+
+    h3{
+      font-size: 24px;
+      color: white;
+    }
+    .footContent {
+      width: 512px;
+      margin: auto;
+      padding: 7px;
+      color: white;
+    }
+    .footContent ul{
+      text-align: center;
+      color: white;
+    }
+    .bottom{
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 50px;
+    }
+    .page{
+      min-height: fit-content;
+    }
+    h4{
+      font-size: 70px;
+      padding-left: 50px;
+      padding-top: 150px;
+    }
+    .ptext{
+      font-size: 28px;
+      padding-left: 50px;
+      padding-top: 30px;
+    }
+    .plist{
+      padding-top: 10px;
+      padding-left: 65px;
+    }
+    .ppoint{
+      font-size: 20px;
+    }
+    .service{
+      font-size: 50px;
+      padding-top: 150px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+       
+
+		/* Add this to your existing styles */
+
+/* Login Form Styles */
+        .booking-container {
+            background-color: #fff;
+            color: #000;
+            padding: 20px;
+            text-align: center;
+            margin: 20px auto;
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #3d0865; /* Use the same color as the header */
+        }
+
+        .booking-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .booking-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .booking-container label {
+            margin-bottom: 8px;
+        }
+
+        .booking-container input,
+        .booking-container textarea {
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #3d0865; /* Use the same color as the header */
+            border-radius: 8px;
+        }
+
+        .booking-container button {
+            padding: 12px;
+            background-color: #3d0865;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .booking-container button:hover {
+            background-color: #1e052d; /* Darker shade on hover */
+        }
+
+
+
+        
+
+    </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <img src="{{ url_for('static', filename='images/logox.png') }}" alt="Logo">
+        <ul>
+
+
+
+          
+        </ul>
+        <button class="btnL"><a href="http://127.0.0.1:5000/adminslotcheck"><b>Slot</b></a></button>
+        <button class="btnL"><a href="http://127.0.0.1:5000/adminoperation"><b>Operations</b></a></button>
+        <button class="btnL"><a href="http://127.0.0.1:5000/admincameraview"><b>Overview</b></a></button>
+        <button class="btnL"><a href="http://127.0.0.1:5000/admincameraview"><b>CameraView</b></a></button>
+        <!-- <button class="btnL"><a href="http://127.0.0.1:5000/login">LOGIN</a></button>
+        <button class="btnR"><a href="http://127.0.0.1:5000/register">REGISTER</a></button> -->
+      </nav>
+    </div>
+  </header>  
+  <!-- Main Content (Set background to homebg.jpg) -->
+  
+
+ 
+  <div style="background-color: #fff; padding: 20px; display: flex; flex-direction: column; align-items: center; min-height: calc(100vh - 384px); box-sizing: border-box;">
+    <!-- Registration Form -->
+    <div class="booking-container" style="width: 80%; max-width: 600px; margin-bottom: 40px; border: 2px solid #3d0865; padding: 20px; box-sizing: border-box;">
+        <h2>Booking</h2>
+  
+
+  <form action="http://127.0.0.1:5000/adminoperation" method="post">
+    <label for="fullname">Fullname:</label>
+    <input type="text" id="fullname" name="fullname" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter 10-digit phone number" required>
+
+    <label for="location">Location:</label>
+    <select id="location" name="location" required>
+        <option value="Brac University Mohakhali">Brac University Mohakhali</option>
+        <option value="Jamuna Future Park">Jamuna Future Park</option>
+        <option value="Basundhara Genetic Plaza">Basundhara Genetic Plaza</option>
+        <option value="Dhanmondi">Dhanmondi</option>
+        <option value="Basundhara Mall, Panthapath">Basundhara Mall, Panthapath</option>
+    </select>
+    <label for="bookingDate">Booking Date:</label>
+<input type="date" id="bookingDate" name="bookingDate" required>
+
+   
+
+
+    <label for="timeSlot">Time Slot:</label>
+    <select id="timeSlot" name="timeSlot" required>
+        <option value="9am-10am">9am - 10am</option>
+        <option value="10am-11am">10am - 11am</option>
+        <!-- Add other time slot options -->
+    </select>
+
+    <label for="rowNumber">Row Number:</label>
+    <select type="text" id="rowNumber" name="rowNumber" required>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="E">E</option></select>
+        
+
+    <label for="columnNumber">Column Number:</label>
+    <select ype="text" id="columnNumber" name="columnNumber" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option></form></select>
+
+      
+	
+				<button type="submit" name="action" value="Add">ADD</button>
+    <button type="submit" name="action" value="Delete">DELETE</button>
+
+        
+
+
+			</form>
+      
+		</div>
+	  </div>
+  <!-- Footer -->
+  <!-- Main Content (Set background to homebg.jpg) -->
+  <main></main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footContainer">
+      <div class="footContent">
+        <h3>ABOUT US</h3>
+        <p><br>PARK.io is a trusted provider of parking management services, dedicated to alleviating parking and management pain points since 2077. With a commitment to dedication and integrity, PARK.io offers a wide array of parking management services, including parking slot booking, parking lot management etc.</p>
+      </div>
+      <div class="footContent">
+        <h3>CONTACT US</h3>
+        <p><br>+007 9089 6767</p>
+        <p>abc@gmail.com</p>
+      </div>
+    </div>
+    <div class="bottom">
+      <p>&copy; PARK.io All rights reserved</p>
+    </div>
+  </footer>
+</body>  
+</html>

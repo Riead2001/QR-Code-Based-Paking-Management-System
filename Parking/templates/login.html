@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | PARK.io</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-height: fit-content;
+  background-color: #3d0865;
+  background-size: contain;
+  background-position: center;
+  padding: 10px 8%;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.logo {
+  width: 80px; /* Adjust the width of the logo */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0; /* Adjust margins as needed */
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+  list-style: none;
+  width: 100%;
+  text-align: right;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  color: rgb(200, 200, 200);
+  text-decoration: none;
+}
+    
+.btnL{
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      border: 0;
+      outline: 0;
+      border-radius: 40px;
+      background-color:#3d0865;
+      cursor: pointer;
+    }
+    .btnL a{
+      color:white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .btnR{
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      border:0;
+      outline: 0;
+      border-radius: 40px;
+      background-color: black;
+      cursor: pointer;
+    }
+    .btnR a{
+      color:white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .btnT{
+      position: relative;
+      left:50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+      align-items: center;
+      padding-top: 200px;
+      padding-bottom: 200px;
+      padding-left: 100px;
+      padding-right: 100px;
+      border:0;
+      outline: 0;
+      background-color:transparent;
+      cursor: pointer;
+    }
+    footer{
+      background-color:#3d0865;
+      padding-top: 50px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 5px;      
+    }
+    .footContainer{
+      justify-content: center;   
+    }
+
+    h3{
+      font-size: 24px;
+      color: white;
+    }
+    .footContent {
+      width: 512px;
+      margin: auto;
+      padding: 7px;
+      color: white;
+    }
+    .footContent ul{
+      text-align: center;
+      color: white;
+    }
+    .bottom{
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 50px;
+    }
+    .page{
+      min-height: fit-content;
+    }
+    h4{
+      font-size: 70px;
+      padding-left: 50px;
+      padding-top: 150px;
+    }
+    .ptext{
+      font-size: 28px;
+      padding-left: 50px;
+      padding-top: 30px;
+    }
+    .plist{
+      padding-top: 10px;
+      padding-left: 65px;
+    }
+    .ppoint{
+      font-size: 20px;
+    }
+    .service{
+      font-size: 50px;
+      padding-top: 150px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .loginContainer{
+        position: relative;
+        left:50%;
+        transform: translate(-50%);
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 450px;
+        background: black;
+        padding: 10px 50px 0px 50px;
+    }
+    .loginContainer h1{
+        font-size: 28px;
+        color: white;
+        text-align: center;
+        padding: 20px 0 20px 0;
+    }
+    .loginContainer form{
+        padding: 20px 40px;
+        box-sizing: border-box;
+    }
+    form .text_field{
+        position: relative;
+        border-bottom: 2px solid white;
+        margin: 30px 0;
+    }
+    .text_field input{
+        width: 100%;
+        padding: 0 5px;
+        height: 40px;
+        font-size: 20;
+        border:none;
+        background: none;
+        outline: none;
+    }
+    .text_field label{
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        color: rgb(200,200,200);
+        transform: translateY(-50%);
+        font-size: 16px;
+        pointer-events: none;
+        transition: 0.5s;
+    }
+    .text_field span::before{
+        content: '';
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: white;
+    }
+
+    .text_field input:focus~label,
+    .text_field input:valid~label{
+        top:-5px;
+        color: white;
+    }
+    input[type="text"]{
+        color: rgb(200,200,200);
+        font-size: 14px;
+    }
+    input[type="password"]{
+        color: rgb(200,200,200);
+        font-size: 14px;
+    }
+    input[type="submit"]{
+        width: 100%;
+        height: 50px;
+        border: 2px solid;
+        background-color: black;
+        border-radius: 25px;
+        border-color: #3d0865;
+        font-size: 16px;
+        color: white;
+        font-weight: 800;
+        cursor: pointer;
+        outline: none;
+    }
+    .signup{
+        margin: 30px 0;
+        text-align: center;
+        font-size: 16px;
+        color: rgb(200,200,200);
+    }
+    .signup a{
+        font-size: 16px;
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <img src="{{ url_for('static', filename='images/logox.png') }}" alt="Logo">
+
+        
+        <ul>
+
+         
+
+          
+        
+        </ul>
+        <button class="btnL"><a href="http://127.0.0.1:5000/home"><b>HOME</b></a></button>
+        <button class="btnR"><a href="http://127.0.0.1:5000/login"><b>LOGIN</b></a></button>
+        <button class="btnL"><a href="http://127.0.0.1:5000/register"><b>REGISTER</b></a></button>
+        
+      </nav>
+    </div>
+  </header>
+
+
+</div>
+</header>  
+<div class="page">
+  <div class="loginContainer">
+    <h1>Sign in <br>to your account</h1>
+    <form action="http://127.0.0.1:5000/login" method="post">
+      <div class="text_field">
+        <input type="text" id="username" name="username" required>
+        <span></span>
+        <label>Username</label>
+      </div>
+      <div class="text_field">
+          <input type="password" id="password" name="password"required>
+          <span></span>
+          <label>Password</label>
+        </div>
+      <input type="submit" value="LOGIN" href="http://127.0.0.1:5000/home">
+      <div class="signup">
+          Not a member? <a href="http://127.0.0.1:5000/register.html">Sign up</a>
+      </div>
+    </form>      
+  </div>
+</div>
+
+
+ 
+
+  
+    
+
+  <footer>
+    <div class="footContainer">
+      <div class="footContent">
+        <h3>ABOUT US</h3>
+        <p><br>PARK.io is a trusted provider of parking management services, dedicated to alleviating parking and management pain points since 2077. With a commitment to dedication and integrity, PARK.io offers a wide array of parking management services, including parking slot booking, parking lot management etc.</p>
+      </div>
+      <div class="footContent">
+        <h3>CONTACT US</h3>
+        <p><br>+007 9089 6767</p>
+        <p>abc@gmail.com</p>
+      </div>
+    </div>
+    <div class="bottom">
+      <p>&copy; PARK.io All rights reserved</p>
+    </div>
+  </footer>
+</body>  
+</html>
