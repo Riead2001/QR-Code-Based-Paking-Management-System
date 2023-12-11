@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park.io</title>
+    <style>
+        /* Your existing styles */
+
+        /* Updated styles for header */
+        header {
+            background-color: #3d0865;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .logo img {
+            height: 100px;
+        }
+
+        nav {
+            flex: 1; /* Use remaining space in the header */
+            display: flex;
+            justify-content: flex-start; /* Align to the left */
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        nav li {
+            margin-right: 20px; /* Adjust margin to separate links */
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em; /* Increase font size */
+        }
+
+        /* Add a new style for the right-aligned links */
+        .right-links {
+            display: flex;
+            justify-content: flex-end;
+            flex: 1;
+        }
+
+        .right-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 1.2em; /* Increase font size */
+        }
+
+        main {
+            background-image: url('homebg.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            height: 100vh;
+            background-size: cover;
+        }
+
+        /* Styles for the footer */
+        .footer {
+            background-color: #3d0865;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .footer h2 {
+            margin-bottom: 10px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .subscribe {
+            order: 3;
+            flex: 1 0 100%;
+            margin-top: 20px;
+        }
+
+        .footer div {
+            flex: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="logo.jpg" alt="Logo">
+    </div>
+    <nav>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li><a href="http://127.0.0.1:5000">Home</a></li>
+        <li><a href="http://127.0.0.1:5000/about">About</a></li>
+        <li><a href="http://127.0.0.1:5000/booking">Booking</a></li>
+      </ul>
+    </nav>
+    <div class="right-links">
+      <a href="http://127.0.0.1:5000/login">Login</a>
+      <a href="http://127.0.0.1:5000/register">Register</a>
+    </div>
+  </header>
+
+  <!-- Main Content (Set background to homebg.jpg) -->
+  <main style="background: url('GATXUWWYDFFHN4SK64F6H3X6UVUCRGMR6BXJ4JAPT2MMG5QI5VRQLQNE') no-repeat center center fixed; background-size: cover;"></main>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div>
+      <h2>About us</h2>
+      <p>Welcome to Park.io, your premier parking booking solution. Experience the ease of QR code technology and real-time webcam feeds for seamless and secure parking transactions.</p>
+    </div>
+
+    <div>
+      <h2>Contact us</h2>
+      <p>+007 9089 6767<br>abc@gmail.com</p>
+    </div>
+
+    <div>
+      <h2>Our Services</h2>
+      <p>Parking Solution<br>Online Booking<br>QR Code solution <br>  <br>  <br>  <br>  <br> </p>
+    </div>
+
+    <div class="subscribe">
+      <h2>Subscribe us</h2>
+      <p>Enter email address</p>
+    </div>
+
+    <p>&copy; 2020 PARK.io All rights reserved</p>
+  </div>
+
+</body>
+</html>

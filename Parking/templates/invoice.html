@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice</title>
+    <style>
+        /* Some basic styles for the invoice */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .invoice {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .invoice-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .invoice-details {
+            margin-bottom: 20px;
+        }
+        .invoice-details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .invoice-details th, .invoice-details td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        .invoice-total {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="invoice">
+        <div class="invoice-header">
+            <h2>Invoice</h2>
+        </div>
+        <div class="invoice-details">
+            <table>
+                <tr>
+                    <th>Name:</th>
+                    <td>{{ fullname }}</td>
+                </tr>
+                <tr>
+                    <th>Phone:</th>
+                    <td>{{ phone }}</td>
+                </tr>
+                <tr>
+                    <th>Location:</th>
+                    <td>{{ location }}</td>
+                </tr>
+                <tr>
+                    <th>Time Slot:</th>
+                    <td>{{ time_slot }}</td>
+                </tr>
+                <tr>
+                    <th>Row Number:</th>
+                    <td>{{ row_number }}</td>
+                </tr>
+                <tr>
+                    <th>Column Number:</th>
+                    <td>{{ column_number }}</td>
+                </tr>
+                <tr>
+                    <th>Fee:</th>
+                    <td>{{ fees }} Taka</td>
+                </tr>
+            </table>
+        </div>
+        <div class="invoice-total">
+            <strong>Total:</strong> {{ fees }} Taka
+        </div>
+
+
+        <body>
+           
+            
+            <img src="{{ url_for('static', filename='images/qr_code.png') }}" alt="QRcode">
+</body>
+</html>
